@@ -5,10 +5,16 @@ spring:
   application:
     name: user-service
 
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8001/eureka/
+  cloud:
+    nacos:
+      discovery:
+        # Nacos地址
+        server-addr: http://localhost:8848
+
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: http://localhost:8001/eureka/
 

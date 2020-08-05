@@ -4,13 +4,22 @@ server:
 spring:
   application:
     name: feign-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        # Nacos地址
+        server-addr: http://localhost:8848
 
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8001/eureka/
+
+
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: http://localhost:8001/eureka/
 feign:
   hystrix:
     enabled: true
